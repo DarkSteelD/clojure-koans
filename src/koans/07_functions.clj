@@ -29,7 +29,7 @@
   (= 9 (((fn [] +)) 4 5))
 
   "Functions can also take other functions as input"
-  (= 20 ((fn [f] (f 4 5))
+  (= 9 ((fn [f] (f 4 5))
            +))
 
   "Higher-order functions take function arguments"

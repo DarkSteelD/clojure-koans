@@ -7,10 +7,10 @@
   (= "hello" "hello")
 
   "But double quotes are just magic on top of something deeper"
-  (= w (str 'world))
+  (= "world" (str 'world))
 
   "You can do more than create strings, you can put them together"
-  (= "Cool right?" (str "Cool" "right"))
+  (= "Cool right?" (str "Cool " "right?"))
 
   "You can even get certain characters"
   (= \C (get "Characters" 0))
@@ -25,19 +25,19 @@
   (= "World" (subs "Hello World" 6 11))
 
   "How about joining together elements in a list?"
-  (= 123 (string/join '(1 2 3)))
+  (= "123" (string/join '(1 2 3)))
 
   "What if you wanted to separate them out?"
   (= "1, 2, 3" (string/join ", " '(1 2 3)))
 
   "Maybe you want to separate out all your lines"
-  (= [1 2 3] (string/split-lines "1\n2\n3"))
+  (= ["1" "2" "3"] (string/split-lines "1\n2\n3"))
 
   "You may want to make sure your words are backwards"
   (= "olleh" (string/reverse "hello"))
 
   "Maybe you want to find the index of the first occurrence of a substring"
-  (= 0 (string/index-of "hello world" h))
+  (= 0 (string/index-of "hello world" "h"))
 
   "Or maybe the last index of the same substring"
   (= 13 (string/last-index-of "hello world, hello" "hello"))

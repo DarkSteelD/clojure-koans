@@ -48,7 +48,7 @@
                       assoc :park "Oracle Park")))
 
   "But it won't affect behavior like equality"
-  (= true (vary-meta giants dissoc :league))
+  (= 'Giants (vary-meta giants dissoc :league))
 
   "Or the object's printed representation"
   (= "Giants" (pr-str (vary-meta giants dissoc :league))))
